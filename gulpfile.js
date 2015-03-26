@@ -12,5 +12,32 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+
+    mix.sass('app.sass');
+
+    mix.styles([
+    	'uikit/cssuikit.css',
+        'animsition/dist/css/animsition.css',
+    	'app.css'
+    ], 'public/css/main.css', 'vendor/bower');
+
+    mix.scripts([
+        'jquery/dist/jquery.js',
+    	'gmaps/gmaps.js',
+    	'humane/humane.js',
+    	'skeuocard/javascripts/skeuocard.js',
+    	'uikit/js/uikit.js',
+        'animsition/dist/js/jquery.animsition.js'
+    ], 'public/js/main.js', 'vendor/bower/');
+
+    mix.styles([
+        'bootstrap/css/bootstrap.css',
+        'bootstrap-wysiwyg/style.css'
+    ], 'public/css/text-editor.css', 'vendor/bower/');
+
+    mix.scripts([
+        'jquery/dist/jquery.js',
+        'bootstrap/js/bootstrap.js',
+        'bootstrap-wysiwyg/js/bootstrap-wysiwyg.js'
+    ], 'public/js/text-editor.js', 'vendor/bower/');
 });

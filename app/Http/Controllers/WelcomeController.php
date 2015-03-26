@@ -19,7 +19,7 @@ class WelcomeController extends Controller {
 	public function index()
 	{
 		$posts = Post::orderBy('id', 'DESC')->take(5)->get();
-		return view('cleancampaign.home', ['posts' => $posts]);
+		return view('main', ['posts' => $posts]);
 	}
 
 	/**

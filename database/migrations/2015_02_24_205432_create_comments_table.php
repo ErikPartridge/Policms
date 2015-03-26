@@ -17,8 +17,9 @@ class CreateCommentsTable extends Migration {
 			$table->increments('id');
 			//No more than 16kB
 			$table->text('content');
-			$table->integer('user')->unsigned();
-			$table->foreign('user')->references('id')->on('users');
+			$table->string('name');
+			$table->string('email');
+			$table->boolean('approved');
 			$table->integer('post')->unsigned();
 			$table->foreign('post')->references('id')->on('posts');
 			$table->timestamps();

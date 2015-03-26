@@ -17,11 +17,13 @@ Route::get('/home', function(){
 	return Redirect::to('/');
 });
 
-Route::controller('auth', 'Auth\AuthController');
+Route::controller('/auth', 'Auth\AuthController');
 
-Route::get('posts/create', 'PostController@showPostCreate');
+Route::controller('/password', 'Auth\PasswordController');
 
-Route::post('posts/create', 'PostController@createPost');
+Route::get('/posts/create', 'PostController@showPostCreate');
+
+Route::post('/posts/create', 'PostController@createPost');
 
 Route::get('/posts', 'PostController@index');
 

@@ -1,0 +1,86 @@
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:300); */
+
+*{
+	font-family: Raleway, sans-serif;
+}
+
+a:hover{
+    color:#3399fF;
+    border-bottom: 2px solid #3399ff;
+}
+
+a{
+	display:inline;
+	color:#000000;
+	font-size: 2em;
+	text-decoration: none;
+	border-bottom: 2px solid black;
+}
+
+/* Keep the color of the menu the same */
+a :visited{
+	color:#000000;
+	font-size: 2em;
+}
+
+
+.landing-container {
+    z-index: 1;
+    width: 100%;
+    top: 30;
+    left: 0;
+}
+
+#heavy{
+    font-size: 4em;
+    margin-bottom: 3px;
+}
+
+#light{
+    font-size: 1.5em;
+    color: #707070;
+}
+
+#landing {
+    width: 80%;
+    height: 65%;
+    margin: auto;
+    position: absolute;
+    top: 15%; left: 0; bottom: 0; right: 0;
+    text-align: center;
+}
+
+#lower-form{
+    width: 48%;
+    position: absolute;
+    top: 55%; left: 30%; right: 22%;
+    margin: auto;
+}
+
+#recent{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#head{
+    height: 90%;
+    border-bottom: solid black 2px;
+}
+
+#blog-top{
+    height: 15% !important;
+}
+
+.post{
+    width: 70%;
+    margin:auto;
+}
+.post h4{
+    font-size: 20px !important;
+    text-align: center;
+}
+
+.post p{
+    font-family: serif;
+    font-size: 16px;
+}

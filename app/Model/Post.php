@@ -23,5 +23,8 @@ class Post extends Model{
 
 	//the title of the article
 	private $title;
+
+	//if it is published
+	private $published;
 	
 }

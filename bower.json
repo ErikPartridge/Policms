@@ -14,12 +14,13 @@
     "tests"
   ],
   "dependencies": {
-    "skeuocard": "~1.1.0",
-    "humane": "~3.2.2",
-    "aja": "~0.3.3",
-    "dropzone": "~4.0.1",
-    "gmaps": "~0.4.17",
-    "ckeditor": "~4.4.7",
-    "pure": "~0.6.0"
+    "skeuocard": ">=1.0",
+    "humane": "3.*",
+    "gmaps": "0.4.*",
+    "uikit": "2.18.*",
+    "animsition": ">=3.4.3",
+    "mailcheck": ">=1.1.0",
+    "modernizr": ">=2.8.3",
+    "loaders.css": "*"
   }
 }

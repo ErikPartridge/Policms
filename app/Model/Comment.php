@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,4 +17,6 @@ class Comment extends Model {
 	//the title of the comment
 	private $title;
 
+	//If the comment is approved
+	private $approved;
 }

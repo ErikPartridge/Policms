@@ -17,9 +17,10 @@ class CreateDonationsTable extends Migration {
 			$table->increments('id');
 			//They aren't about to make a negative donation
 			$table->integer('amount')->unsigned();
+			$table->boolean('approved');
 			$table->time('date');
 			$table->integer('donor')->unsigned();
-			$table->foreign('donor')->references('id')->on('users');
+			$table->foreign('donor')->references('id')->on('donors');
 			$table->timestamps();
 		});
 	}

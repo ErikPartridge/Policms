@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://poli.dev',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -147,10 +147,11 @@ return [
 		* Custom providers
 		*/
 		'Laravel\Cashier\CashierServiceProvider',
-		'Barryvdh\Debugbar\ServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 		'Skovmand\Mailchimp\MailchimpServiceProvider',
 		'Laravel\Socialite\SocialiteServiceProvider',
+		'Frozennode\Administrator\AdministratorServiceProvider',
+		'Laravel\Cashier\CashierServiceProvider',
 
 
 	],
@@ -200,7 +201,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-		'Form'=> 'Illuminate\Html\FormFacade', 
+		'Form'=> 'Illuminate\Html\FormFacade',
 		'HTML'=> 'Illuminate\Html\HtmlFacade',
 		//Custom:
 		'Socialize' => 'Laravel\Socialite\Facades\Socialite',

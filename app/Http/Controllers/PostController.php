@@ -18,7 +18,7 @@ class PostController extends Controller {
 	 */
 	public function index()
 	{
-		return view('cleancampaign.posts', ['posts' => Post::all()]);
+		return view('posts', ['posts' => Post::all()]);
 	}
 
 	/**
@@ -28,18 +28,19 @@ class PostController extends Controller {
 	 */
 	public function create()
 	{
-		return view('cleancampaign.create-post');
+		return showPostCreate();
 	}
 
 	public function showPostCreate(){
-		if(! Auth::check()){
+		if(! Auth::check() || !Auth::user()->admin){
 			return Redirect::to('/auth/login');
 		}
-		return view('cleancampaign.create-post');
+
+		return view('admin.create-post');
 	}
 
 	public function createPost(Request $request){
-		if(! Auth::check()){
+		if(! Auth::check() || !Auth::user()->admin){
 			return Redirect::to('/auth/login');
 		}
 		$post = new Post(array(
@@ -80,7 +81,7 @@ class PostController extends Controller {
 	 */
 	public function edit($id)
 	{
-		if(Auth::user()->isAdmin()){
+		if(Auth::user()->admin()){
 			return view('edit_post', Post::get($id));
 		}else{
 			return Redirect::to('/users/login');
