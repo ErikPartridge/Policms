@@ -15,12 +15,10 @@
   ],
   "dependencies": {
     "skeuocard": ">=1.0",
-    "humane": "3.*",
     "gmaps": "0.4.*",
-    "uikit": "2.18.*",
     "animsition": ">=3.4.3",
-    "mailcheck": ">=1.1.0",
     "modernizr": ">=2.8.3",
-    "loaders.css": "*"
+    "loaders.css": "*",
+    "materialize": ">=0.95.0"
   }
 }
