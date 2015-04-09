@@ -1,33 +1,31 @@
-<?php namespace App\Model;
+<?php namespace app\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Cashier\Billable;
 use Laravel\Cashier\Contracts\Billable as BillableContract;
 
+class Donor extends Model implements BillableContract
+{
 
-class Donor extends Model implements BillableContract {
+    use Billable;
 
-	use Billable;
+    private $first;
 
-	private $first;
+    private $middle;
 
-	private $middle;
+    private $last;
 
-	private $last;
+    private $email;
 
-	private $email;
+    private $employer;
 
-	private $employer;
+    private $job;
 
-	private $job;
+    private $street;
 
-	private $street;
+    private $city;
 
-	private $city;
+    private $state;
 
-	private $state;
-
-	private $phone;
-
-
+    private $phone;
 }

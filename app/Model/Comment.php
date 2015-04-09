@@ -1,22 +1,23 @@
-<?php namespace App\Model;
+<?php namespace app\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model {
+class Comment extends Model
+{
 
-	protected $table = 'comments';
+    protected $table = 'comments';
 
-	public static $name = 'comment';
-	
-	//This is long, html
-	private $content;
+    public static $name = 'comment';
+    
+    //This is long, html
+    private $content;
 
-	//Author's id, will update
-	private $author;
+    //Author's id, will update
+    private $author;
 
-	//the title of the comment
-	private $title;
+    //the title of the comment
+    private $title;
 
-	//If the comment is approved
-	private $approved;
+    //If the comment is approved
+    private $approved;
 }

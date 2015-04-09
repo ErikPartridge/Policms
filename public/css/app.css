@@ -29,5 +29,15 @@ p {
   color: #424242 !important;
   font-family: 'PT Serif', serif !important; }
 
+footer {
+  text-align: center; }
+
+.amt {
+  color: #fff !important; }
+
+.post {
+  margin-left: 10%;
+  margin-right: 10%; }
+
 
 /*# sourceMappingURL=app.css.map */

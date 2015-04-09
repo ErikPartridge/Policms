@@ -12,7 +12,7 @@
 			<div class="card blue lighten-3">
 				<div class="card-content">
 					<div class="video-container">
-        				<iframe width="560" height="315" src="https://www.youtube.com/embed/3ZJ5K0zo7dc" frameborder="0" allowfullscreen></iframe>
+        				<iframe width="560" height="315" src="{{$video}}" frameborder="0" allowfullscreen></iframe>
     				</div>
 				</div>
 				<div class="card-action" style="background-color:#FFF;">
@@ -33,7 +33,7 @@
 			<div class="card red lighten-3">
 				<div class="card-content">
 					<h3 class="block">Get Involved</h3>
-					<p style="font-family:'PT Serif', serif">Lorem ipsum dolor sit amet, his ut tollit percipitur, no ignota lucilius sapientem duo. No iisque utroque accusata est, sit eu clita accumsan. Vis no alia facete tritani, eu est nominati torquatos.</p>
+					<p style="font-family:'PT Serif', serif">{{$message}}</p>
 					<div class="row">
 						<a href="/volunteer" class="waves-effect btn-lg"><h3 class="block-white">Volunteer</h3></a><br>
 						<a href="/donate" class="waves-effect btn-lg"><h3 class="block-white">Donate</h3></a><br>
@@ -47,12 +47,12 @@
 	<nav id="bottom-menu">
     	<div class="nav-wrapper">
       		<ul id="nav-mobile" class="left hide-on-med-and-down row">
-        		<li class="s3"><a class="menu-item-grey" href="/about">About</a></li>
-        		<li class="s3"><a class="menu-item-grey" href="/blog">Blog</a></li>
-        		<li class="s3"><a class="menu-item-grey" href="/issues">Issues</a></li>
-        		<li class="s3"><a class="menu-item-grey" href="/volunteer">Volunteer</a></li>
-        		<li class="s3"><a class="menu-item-grey" href="/donate">Donate</a></li>
-        		<li class="s3"><a class="menu-item-grey" href="/contact">Contact</a></li>
+        		<li><a class="menu-item-grey" href="/about">About</a></li>
+        		<li><a class="menu-item-grey" href="/blog">Blog</a></li>
+        		<li><a class="menu-item-grey" href="/issues">Issues</a></li>
+        		<li><a class="menu-item-grey" href="/volunteer">Volunteer</a></li>
+        		<li><a class="menu-item-grey" href="/donate">Donate</a></li>
+        		<li><a class="menu-item-grey" href="/contact">Contact</a></li>
       		</ul>
     	</div>
   </nav>
@@ -60,11 +60,6 @@
 
 @section('scripts')
 	<script>
- 		$("#bottom-menu").sticky({ topSpacing: 0 });
+ 		$("#bottom-menu").sticky({ bottomSpacing: 0 });
 	</script>
 @stop
-
-
-
-
-

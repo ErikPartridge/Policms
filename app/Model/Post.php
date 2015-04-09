@@ -1,30 +1,33 @@
-<?php namespace App\Model;
+<?php namespace app\Model;
 
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\SluggableInterface;
-use Cviebrock\EloquentSluggable\SluggableTrait;
+use App\Services\Administrator;
 
-class Post extends Model{
+
+class Post extends Model
+{
 
     protected $fillable = ['title', 'content', 'author'];
 
-	protected $table = 'posts';
+    protected $table = 'posts';
 
-	public static $name = 'post';
-	
-	//This is long, html
-	private $content;
+    public static $name = 'post';
+    
+    //This is long, html
+    private $content;
 
-	//Foreign Key
-	private $author;
+    //Foreign Key
+    private $author;
 
-	//List of tags
-	private $tags;
+    //List of tags
+    private $tags;
 
-	//the title of the article
-	private $title;
+    //the title of the article
+    private $title;
 
-	//if it is published
-	private $published;
-	
+    //if it is published
+    private $published;
+
+    private $slug;
+
 }

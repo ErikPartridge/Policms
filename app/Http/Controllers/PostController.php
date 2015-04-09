@@ -1,126 +1,61 @@
-<?php namespace App\Http\Controllers;
+<?php namespace app\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 use App\Model\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
 
-class PostController extends Controller {
+class PostController extends Controller
+{
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		return view('posts', ['posts' => Post::all()]);
-	}
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        return view('posts', ['posts' => Post::where('published', '=', 1)->get()]);
+    }
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return showPostCreate();
-	}
 
-	public function showPostCreate(){
-		if(! Auth::check() || !Auth::user()->admin){
-			return Redirect::to('/auth/login');
-		}
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store()
+    {
+        //
+    }
 
-		return view('admin.create-post');
-	}
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        $post = Post::where('slug', '=', $id)->firstOrFail();
+        if(!$post->published){
+            return Redirect::to('/blog/');
+        }
+        $age = \Carbon\Carbon::parse($post->updated_at)->diffForHumans();
+        return view('post', ['post' => $post, 'age' => $age]);
+    }
 
-	public function createPost(Request $request){
-		if(! Auth::check() || !Auth::user()->admin){
-			return Redirect::to('/auth/login');
-		}
-		$post = new Post(array(
-			'title' => str_replace("style=text-align: justify; line-height: 14px; margin: 0px 0px 14px; padding: 0px; font-family: Arial, Helvetica, sans;","", $request->input('title')),
-			'content' => $request->input('content'),
-			'author' => Auth::user()->id));
-		$post->slug = Str::slug($post->title);
-		$post->save();
-		return Redirect::to('/');
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		return view('cleancampaign.post', ['post' => Post::where('slug', '=', $id)->firstOrFail(), 'posts' => Post::all()]);
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		if(Auth::user()->admin()){
-			return view('edit_post', Post::get($id));
-		}else{
-			return Redirect::to('/users/login');
-		}
-
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		if(Auth::user()->isAdmin()){
-			//Get the input passed to the function
-			$input = Input::all();
-			//Post to edit
-			$post = Post::get($id);
-
-			//Change the content, title can't be changed because encoded in url
-			$post->content = $input['content'];
-			$post->save();
-			//Tell it was a success
-			Session::flash('updated', true);
-			return view('edit_post', Post::get($id));
-		}
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }

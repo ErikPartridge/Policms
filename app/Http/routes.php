@@ -11,24 +11,33 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'StaticController@home');
 
-Route::get('/home', function(){
-	return Redirect::to('/');
+Route::get('/home', function () {
+    return Redirect::to('/');
 });
 
 Route::controller('/auth', 'Auth\AuthController');
 
 Route::controller('/password', 'Auth\PasswordController');
 
-Route::get('/posts/create', 'PostController@showPostCreate');
-
-Route::post('/posts/create', 'PostController@createPost');
 
 Route::get('/posts', 'PostController@index');
 
 Route::post('/join', 'WelcomeController@join');
 
-Route::get('/contact', 'ContactController@show');
+Route::get('/contact', 'StaticController@contact');
 
-Route::get('/posts/{id}', 'PostController@show');
+Route::get('/blog/{id}', 'PostController@show');
+
+Route::post('/thank-you', 'MailingController@create');
+
+Route::get('/donate', 'DonationController@index');
+
+Route::get('/credit-card/{id}', 'DonationController@show');
+
+Route::post('/credit-card', 'DonationController@render');
+
+Route::get('/about', 'StaticController@about');
+
+Route::get('/blog', 'PostController@index');

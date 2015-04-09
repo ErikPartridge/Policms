@@ -15,10 +15,11 @@
   ],
   "dependencies": {
     "skeuocard": ">=1.0",
-    "gmaps": "0.4.*",
     "animsition": ">=3.4.3",
     "modernizr": ">=2.8.3",
     "loaders.css": "*",
-    "materialize": ">=0.95.0"
+    "materialize": ">=0.95.0",
+    "tock": "~1.0.5",
+    "leaflet": "~0.7.3"
   }
 }
