@@ -41,3 +41,7 @@ Route::post('/credit-card', 'DonationController@render');
 Route::get('/about', 'StaticController@about');
 
 Route::get('/blog', 'PostController@index');
+
+Route::get('/issues', 'StaticController@issues');
+
+Route::get('/volunteer', 'StaticController@volunteer');

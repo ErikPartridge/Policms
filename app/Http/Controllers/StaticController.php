@@ -39,5 +39,13 @@ class StaticController extends Controller{
 		return view('main', ['video' => $video, 'message' => $message]);
 	}
 
+	public function issues(){
+		$content = Administrator::getTrait('issues', 'content');
+		return view('issues', array('content' => $content));
+	}
+
+	public function volunteer(){
+		return view('volunteer');
+	}
 	
 }
