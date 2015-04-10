@@ -8,7 +8,7 @@
 		<h1 class="block">Erik A. Partridge</h1>
 	</div>
 	<div class="row cardholder">
-		<div class="col s12 m5 l5 offset-m1" id="video-card">
+		<div class="col s12 m5 l5 offset-m1 offset-l1" id="video-card">
 			<div class="card blue lighten-3">
 				<div class="card-content">
 					<div class="video-container">
@@ -22,7 +22,7 @@
       							<div class="input-field col s6" style="margin-top:0px!important;paddington">
         							<input id="email" type="email" placeholder="mailinglist@youremail.com" class="validate">
       							</div>
-      							<button class="btn col m3 s3 offset-s3 blue" style="font-family:'PT Serif', serif">Submit</button>
+      							<button class="btn col m3 s3 offset-s3 blue" style="font-family:'PT Serif', serif;">Submit</button>
     						</div>
 						{!!Form::close()!!}
 					</div>
@@ -42,24 +42,21 @@
 				</div>
 			</div>
 		</div>
-		<div class="col m1"></div>
+		<div class="col m1 l1"></div>
 	</div>
 	<nav id="bottom-menu">
     	<div class="nav-wrapper">
-      		<ul id="nav-mobile" class="left hide-on-med-and-down row">
-        		<li><a class="menu-item-grey" href="/about">About</a></li>
-        		<li><a class="menu-item-grey" href="/blog">Blog</a></li>
-        		<li><a class="menu-item-grey" href="/issues">Issues</a></li>
-        		<li><a class="menu-item-grey" href="/volunteer">Volunteer</a></li>
-        		<li><a class="menu-item-grey" href="/donate">Donate</a></li>
-        		<li><a class="menu-item-grey" href="/contact">Contact</a></li>
+      		<ul id="nav-mobile" class="row left hide-on-med-and-down row">
+        		<li><a class="col m2 l2 menu-item-grey" href="/about">About</a></li>
+        		<li><a class="col m2 l2 menu-item-grey" href="/blog">Blog</a></li>
+        		<li><a class="col m2 l2 menu-item-grey" href="/issues">Issues</a></li>
+        		<li><a class="col m2 l2 menu-item-grey" href="/volunteer">Volunteer</a></li>
+        		<li><a class="col m2 l2 wmenu-item-grey" href="/donate">Donate</a></li>
+        		<li><a class="col m2 l2 menu-item-grey" href="/contact">Contact</a></li>
       		</ul>
     	</div>
   </nav>
  @stop
 
 @section('scripts')
-	<script>
- 		$("#bottom-menu").sticky({ bottomSpacing: 0 });
-	</script>
 @stop
