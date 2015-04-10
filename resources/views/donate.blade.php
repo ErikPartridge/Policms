@@ -15,10 +15,18 @@
         		<li><a class="menu-item-grey" href="/volunteer">Volunteer</a></li>
         		<li><a class="menu-item-grey" href="/contact">Contact</a></li>
       		</ul>
+      		    		<ul id="slide-out" class="side-nav">
+      		  		<li><a class="menu-item-grey" href="/">Home</a></li>
+      		      		<li><a class="menu-item-grey" href="/blog">Blog</a></li>
+      		      		<li><a class="menu-item-grey" href="/issues">Issues</a></li>
+      		      		<li><a class="menu-item-grey" href="/volunteer">Volunteer</a></li>
+      		      		<li><a class="menu-item-grey" href="/donate">Donate</a></li>
+      		      		<li><a class="menu-item-grey" href="/contact">Contact</a></li>
+      				</ul>
     	</div>
   </nav>
 	<div class="row" style="margin-top:5%;">
-		<div class="col m4 s12 l4 offset-m4">
+		<div class="col m4 s12 l4 offset-m4 offset-l4">
 			<div class="card blue lighten-2">
 				<div class="card-content">
 					<h3 style="color:#FFF;">Donate!</h3>
@@ -40,4 +48,7 @@
 @stop
 
 @section('scripts')
+	<script>
+		$(".button-collapse").sideNav();
+	</script>
 @stop
