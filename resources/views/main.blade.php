@@ -8,7 +8,7 @@
 		<h1 class="block">Erik A. Partridge</h1>
 	</div>
 	<div class="row cardholder">
-		<div class="col s12 m5 l5 offset-s1" id="video-card">
+		<div class="col s12 m5 l5 offset-m1" id="video-card">
 			<div class="card blue lighten-3">
 				<div class="card-content">
 					<div class="video-container">
