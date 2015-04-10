@@ -7,7 +7,6 @@
 	<div class="header">
 		<h1 class="block">Erik A. Partridge</h1>
 	</div>
-	<a href="#" data-activates="slide-out" class="button mobile-only button-collapse">TOGGLE MENU</a>
 	<div class="row cardholder">
 		<div class="col s12 m5 l5 offset-m1 offset-l1" id="video-card">
 			<div class="card blue lighten-3">
@@ -46,6 +45,7 @@
 		<div class="col m1 l1"></div>
 	</div>
 	<nav id="bottom-menu">
+		<a href="#" data-activates="slide-out" class="button mobile-only button-collapse">MENU</a>
     	<div class="nav-wrapper">
       		<ul id="nav-mobile" class="left hide-on-med-and-down row">
         		<li><a class="menu-item-grey" href="/about">About</a></li>

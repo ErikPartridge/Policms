@@ -7,7 +7,7 @@
 @section('content')
 	<nav id="">
     	<div class="nav-wrapper">
-    		<a href="#" data-activates="slide-out" class="button mobile-only button-collapse">TOGGLE MENU</a>
+    		<a href="#" data-activates="slide-out" class="button mobile-only button-collapse">MENU</a>
 
       		<ul id="nav-mobile" class="left hide-on-med-and-down row">
         		<li><a class="menu-item-grey" href="/">Home</a></li>
