@@ -36,7 +36,7 @@ return array(
      * no length restrictions are enforced.  Set it to a positive integer if you
      * want to make sure your slugs aren't too long.
      */
-    'max_length' => null,
+    'max_length' => 30,
 
     /**
      * If left to "null", then use Laravel's built-in Str::slug() method to

@@ -20,17 +20,17 @@
 	<div class="container">	
 		<h1 class="block">All About Me</h1>
 		<div class="row">
-			<div class="col s2">
+			<div class="col s12 m2 l2">
 				<div class="card blue lighten-4">
 					<div class="card-content">
 						Like what you see? <a href="/donate">Donate today!</a>
 					</div>
 				</div>
 			</div>
-			<div class="col s8">
+			<div class="col s12 m8 l8">
 			{!! $content !!}
 			</div>
-			<div class="col s2">
+			<div class="col s0 m2 l8">
 			</div>
 		</div>
 	</div>

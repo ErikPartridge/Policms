@@ -8,7 +8,7 @@
 		<h1 class="block">Erik A. Partridge</h1>
 	</div>
 	<div class="row cardholder">
-		<div class="col s5 offset-s1" id="video-card">
+		<div class="col s12 m5 l5 offset-s1" id="video-card">
 			<div class="card blue lighten-3">
 				<div class="card-content">
 					<div class="video-container">
@@ -22,14 +22,14 @@
       							<div class="input-field col s6" style="margin-top:0px!important;paddington">
         							<input id="email" type="email" placeholder="mailinglist@youremail.com" class="validate">
       							</div>
-      							<button class="btn col s3 offset-s3 blue" style="font-family:'PT Serif', serif">Submit</button>
+      							<button class="btn col m3 s3 offset-s3 blue" style="font-family:'PT Serif', serif">Submit</button>
     						</div>
 						{!!Form::close()!!}
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col s5" id="involve-card">
+		<div class="col s12 m5 l5" id="involve-card">
 			<div class="card red lighten-3">
 				<div class="card-content">
 					<h3 class="block">Get Involved</h3>
@@ -42,7 +42,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col s1"></div>
+		<div class="col m1"></div>
 	</div>
 	<nav id="bottom-menu">
     	<div class="nav-wrapper">
