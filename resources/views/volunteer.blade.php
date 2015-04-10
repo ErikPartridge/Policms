@@ -20,7 +20,7 @@
   	<div class="container">	
 		<h1 class="block">Lend a Hand</h1>
 		<div class="row">
-			<div class="col s6">
+			<div class="col s12 m6 l6">
 				<div class="card blue lighten-3">
 					<div class="card-content">
 						I really appreciate your interest in helping out-- drop me a note and let's get started!
@@ -34,7 +34,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s6">
+			<div class="col s12 m6 l6">
 				<div class="card red lighten-3">
 					<div class="card-content">
 						I can use every hand I can get-- if you're looking to help out, send me a note to the left, or, if you are already signed up and want to see our calendar, it's available <a href="https://google.com/calendar">here.</a>

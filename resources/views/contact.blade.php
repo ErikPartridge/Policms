@@ -23,7 +23,7 @@
   	<div class="container">	
 		<h1 class="block">Get In Touch</h1>
 		<div class="row">
-			<div class="col s6">
+			<div class="col m6 s12 l6">
 				<div class="card blue darken-5">
 					<div class="card-content">
 						Mr. Partridge's offices are located at: <br>
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s6">
+			<div class="col s12 m6 l6">
 				<div class="card red darken-5">
 					<div class="card-content">
 						<div id="map" style="height:440px;"></div>

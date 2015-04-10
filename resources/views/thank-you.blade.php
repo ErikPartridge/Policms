@@ -6,7 +6,7 @@
 
 @section('content')
 	<div class="row" style="margin-top:10%;">
-		<div class="col s4 offset-s4">
+		<div class="col m4 s12 offset-m4">
 			<div class="card blue lighten-3">
 				<div class="card-content">
 					<h3 style="color:#FFF;">Thank You!</h3>

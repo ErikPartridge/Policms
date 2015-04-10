@@ -18,7 +18,7 @@
     	</div>
   </nav>
 	<div class="row" style="margin-top:5%;">
-		<div class="col s4 offset-s4">
+		<div class="col m4 s12 l4 offset-m4">
 			<div class="card blue lighten-2">
 				<div class="card-content">
 					<h3 style="color:#FFF;">Donate!</h3>
