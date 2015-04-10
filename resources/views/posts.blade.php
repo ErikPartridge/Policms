@@ -9,6 +9,8 @@
 @section('content')
 <nav id="top-menu">
     	<div class="nav-wrapper">
+        <a href="#" data-activates="slide-out" class="button mobile-only button-collapse">TOGGLE MENU</a>
+
       		<ul id="nav-mobile" class="left hide-on-med-and-down row">
       			<li><a class="menu-item-grey" href="/">Home</a></li>
         		<li><a class="menu-item-grey" href="/about">About</a></li>
