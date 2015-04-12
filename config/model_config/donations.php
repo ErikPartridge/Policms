@@ -1,4 +1,5 @@
 <?php
+use \App\Model\Donor;
 
 return array(
 
@@ -12,7 +13,7 @@ return array(
         'id',
         'amount' => array(
             'output' => function ($value) {
-                return '$' + floor($value / 100) + "." + $value % 100;
+                return $value." cents";
             }
         ),
         'created_at' => array(
@@ -21,7 +22,7 @@ return array(
         'donor' => array(
             'title' => 'Donor\'s Email' ,
             'output' => function ($value) {
-                return Donor::get($value)->email;
+                return Donor::where('id','=',$value)->firstOrFail()->email;
             }
         )
     ),
