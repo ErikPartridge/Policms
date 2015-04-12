@@ -21,7 +21,7 @@ return array(
         'donor' => array(
             'title' => 'Donor\'s Email' ,
             'output' => function ($value) {
-                return $value->donorEmail();
+                return Donor::get($value)->email;
             }
         )
     ),
